@@ -42,6 +42,8 @@ let p6 = document.querySelector(".sixth");
 let cartDiv = document.querySelector(".cart_items");
 let checkoutButton = document.querySelector(".checkout");
 
+bucketNumber();
+
 // * * * P A G I N A T I O N * * *
 
 let current_page = 1;
@@ -433,6 +435,10 @@ const selectProduct = (product) => {
   pDetails.innerHTML = product.description;
   h4Price.innerHTML = `$${product.price.toFixed(2)}`;
   h5Delivery.innerHTML = `DISPATCHED IN 4-5 WEEKS <span>1 left</span>`;
+
+  buttonAddToBucket.id = product.name;
+  checkoutButton.id = `${product.name}checkout`;
+
   for (let i = 0; i < product.colors.length; i++) {
     let liColor = document.createElement("li");
     liColor.style.backgroundColor = product.colors[i];
@@ -445,14 +451,20 @@ const selectProduct = (product) => {
   p5.innerHTML = ` - Filling Materials: ${product.filling_materials} `;
   p6.innerHTML = ` - Comfort level: ${product.comfort_level} `;
 
-  buttonAddToBucket.onclick = () => {
+  buttonAddToBucket.onclick = (product) => {
     console.log("added to cart", product);
     cart.push(product);
     localStorage.setItem("cart", JSON.stringify(cart));
-    let number = cart.length;
     buttonAddToBucket.style.display = "none";
     checkoutButton.style.display = "block";
-    bucketNumber(number);
+    bucketNumber();
+  };
+
+  checkoutButton.onclick = (product) => {
+    checkoutButton.style.display = "none";
+    buttonAddToBucket.style.display = "block";
+    cart.splice(product, 1);
+    bucketNumber();
   };
 };
 
@@ -522,12 +534,12 @@ details.addEventListener("click", function () {
   }
 });
 
-checkoutButton.addEventListener("click", () => {
-  checkoutButton.style.display = "none";
-  buttonAddToBucket.style.display = "block";
-});
-
-const bucketNumber = (number) => {
-  cartDiv.style.display = "block";
-  cartDiv.innerHTML = number;
-};
+function bucketNumber() {
+  let number = cart.length;
+  if (number > 0) {
+    cartDiv.style.display = "block";
+    cartDiv.innerHTML = number;
+  } else {
+    cartDiv.style.display = "none";
+  }
+}

@@ -15,6 +15,16 @@ body {
   color: #22232b;
 }
 
+@media screen and (max-width: 500px) {
+  #wrap {
+    min-width: 470px;
+
+    min-height: 800px;
+
+  }
+
+}
+
 /* * * * * TOP NAV * * * *  */
 
 .nav_container {
@@ -75,38 +85,32 @@ body {
   color: #00c98d;
 }
 
-@media screen and (max-width: 600px) {
-  .top_nav ul:not(:first-child) {
-    display: none;
+@media screen and (max-width: 500px) {
+  .nav_container {
+    position: relative;
+    margin: 0;
+    min-width: 470px;
   }
 
   .top_nav {
+    position: absolute;
+    width: 100%;
     float: right;
     display: block;
   }
 
+  .top_nav ul:not(:first-child) {
+    display: none;
+  }
+
+
   .logo_wrapper {
-    position: relative;
-    top: 30px;
-    right: 20px;
-  }
-
-  .right_nav ul li img {
-    display: block;
-    width: 35px;
-    height: 35px;
     position: absolute;
-    right: 110px;
-    top: 23px;
+    top: 35px;
+    right: 15px;
   }
 
-  .right_nav ul:first-child {
-    display: none;
-  }
 
-  .dropdown:first-child {
-    display: none;
-  }
 }
 
 
@@ -156,6 +160,24 @@ body {
   border-radius: 50%;
   background-color: #00C98D;
   color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .nav_container .right_nav ul li.cart img {
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 35px;
+    top: 29px;
+    right: 110px;
+
+  }
+
+  .nav_container .right_nav ul li.login {
+    position: absolute;
+    display: none;
+  }
+
 }
 
 /* * * * * * * * * * * * * * * * * * *  */
@@ -238,117 +260,27 @@ body {
   color: #22232b;
 }
 
+@media screen and (max-width: 500px) {
+
+  .search_container {
+    min-width: 470px;
+    margin-top: 70px;
+  }
+
+  .search_wrapper {
+    margin: 0px 30px 0px 30px;
+    border-bottom: 2px solid rgba(151, 151, 151, 0.4);
+    width: 100%;
+  }
+
+  .dropdown {
+    display: none;
+  }
+}
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 /* * * * * * * * * G A L L E R I A * * * * * * * * * */
-
-.galleria_container {
-  margin-top: 50px;
-  height: 560px;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/sofaMain.png");
-  background-position: 100% 100%;
-}
-
-.content {
-  padding-top: 50px;
-  margin-left: 60px;
-  width: 50%;
-  height: 30%;
-
-}
-
-.content h2 {
-  margin: 0;
-  background-clip: text;
-  font-family: Avenir;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 66px;
-  color: #ffffff;
-}
-
-.content h3 {
-  margin: 0;
-  font-family: Avenir;
-  font-style: normal;
-  text-decoration: underline;
-  font-weight: normal;
-  font-size: 26px;
-  line-height: 36px;
-  color: #ffffff;
-}
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *  */
-
-/* * * * * * * * * * * F O O T E R * * * * * * * * * * * * */
-hr {
-  margin-top: 100px;
-  border: 1px soli;
-  background: #1b1b1b;
-  mix-blend-mode: normal;
-  opacity: 0.1;
-  transform: matrix(1, 0, 0, -1, 0, 0);
-}
-
-footer {
-  margin-top: 50px;
-  margin-bottom: 80px;
-}
-
-.footer_nav_container {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  bottom: 121px;
-}
-
-/* * * * * * * * M A I N * F O O T E R * N A V * * * * *   */
-.footer_main_nav {
-  width: 50%;
-}
-
-.footer_nav_container .footer_main_nav ul {
-  display: flex;
-  justify-content: space-between;
-  align-self: center;
-  list-style: none;
-}
-
-.footer_nav_container .footer_main_nav ul li {
-  font-family: Avenir;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 13px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: #22232b;
-}
-
-/* * * * * * * Social Networks Icons Nav * * * * * *  */
-
-.footer_nav_container .footer_social_nav {
-  display: flex;
-  justify-content: space-between;
-  align-self: center;
-  width: 10%;
-}
-
-.social_wrapper {
-  width: 25px;
-  height: 25px;
-}
-
-.social_wrapper img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-}
-
-/* * * * * * * * * * * * * * * * * * * * * * * **/
-
 
 .mySlides {
   display: none
@@ -361,11 +293,12 @@ img {
 
 /* Slideshow container */
 .slideshow-container {
-  margin: auto;
-  max-width: 1200px;
-  margin-top: 50px;
-  height: 480px;
   position: relative;
+  margin: auto;
+  max-width: 1375px;
+  margin-top: 50px;
+  height: 80%;
+
 
 }
 
@@ -398,7 +331,7 @@ img {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Caption text */
+
 .text {
   padding: 50px;
   position: absolute;
@@ -406,14 +339,13 @@ img {
   left: 0px;
   bottom: 0px;
   width: 100%;
-  height: 488px;
+
+  max-height: 1000px;
   background: rgb(0, 0, 0);
   /* Fallback color */
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   /* Black background with 0.5 opacity */
   color: #f1f1f1;
-
-
 }
 
 .text h2 {
@@ -468,11 +400,221 @@ img {
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
+
+  .slideshow-container {
+    position: relative;
+    margin-top: 50px;
+    width: 470px;
+    height: 400px;
+    overflow: hidden;
+  }
+
+  .mySlides {
+    width: 470px;
+    height: 450px;
+
+  }
+
+  .mySlides img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+
+  .text {
+    padding: 50px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 305px;
+    background: rgb(0, 0, 0);
+
+    background: rgba(0, 0, 0, 0.2);
+
+    color: #f1f1f1;
+  }
+
+  .text h2 {
+    margin: 0;
+    background-clip: text;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 20px;
+    color: #ffffff;
+  }
+
+  .text h3 {
+    margin: 0;
+    font-family: Avenir;
+    font-style: normal;
+    text-decoration: underline;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    color: #ffffff;
+  }
+
 
   .prev,
   .next,
   .text {
-    font-size: 11px
+    font-size: 30px
   }
 }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * *  */
+
+/* * * * * * * * * * * F O O T E R * * * * * * * * * * * * */
+hr {
+  max-width: 1375px;
+  margin-top: 100px;
+  border: 1px soli;
+  background: #1b1b1b;
+  mix-blend-mode: normal;
+  opacity: 0.1;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+footer {
+  max-width: 1375px;
+  float: center;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.footer_nav_container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  bottom: 121px;
+}
+
+/* * * * * * * * M A I N * F O O T E R * N A V * * * * *   */
+.footer_main_nav {
+  width: 50%;
+}
+
+.footer_nav_container .footer_main_nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  list-style: none;
+}
+
+.footer_nav_container .footer_main_nav ul li {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #22232b;
+}
+
+/* * * * * * * Social Networks Icons Nav * * * * * *  */
+
+.footer_nav_container .footer_social_nav {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 10%;
+}
+
+.social_wrapper {
+  width: 25px;
+  height: 25px;
+}
+
+.social_wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+@media only screen and (max-width: 500px) {
+
+  hr {
+    display: none;
+  }
+
+  footer {
+
+    position: relative;
+    top: 10px;
+    min-width: 470px;
+    min-height: 200px;
+    float: center;
+    margin: auto;
+
+  }
+
+  .footer_nav_container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer_main_nav {
+    width: 50%;
+  }
+
+  .footer_nav_container .footer_main_nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: 60px;
+    width: 350px;
+  }
+
+  .footer_nav_container .footer_main_nav ul li {
+    font-display: flex;
+    justify-content: center;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #22232b;
+    width: 150px;
+    margin-top: 10px;
+  }
+
+  /* * * * * * * Social Networks Icons Nav * * * * * *  */
+
+  .footer_nav_container .footer_social_nav {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+
+  }
+
+  .social_wrapper {
+    width: 35px;
+    height: 35px;
+  }
+
+  .social_wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * **/
