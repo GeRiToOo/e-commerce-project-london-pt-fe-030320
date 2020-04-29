@@ -1,12 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOFAS</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Sofa shop</title>
 </head>
+
 <body>
-    
+    <div id="wrap">
+        <main>
+            <div class="nav_container">
+                <nav class="top_nav">
+                    <div class="logo_wrapper">
+                        <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/logo.png"
+                            alt="logo">
+                    </div>
+                    <ul>
+                        <li class="list_item"><a href="index.html">HOME</a></li>
+                        <li class="list_item"><a href="shop.html">SHOP</a></li>
+                        <li class="list_item">magazine</li>
+                    </ul>
+
+                </nav>
+                <nav class="right_nav">
+                    <ul>
+                        <li>
+                            <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/local_grocery_store-24px.svg"
+                                alt="shopping card">
+                        </li>
+                        <li>login</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="search_container">
+                <div class="search_wrapper">
+                    <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/magnifying-glass.png"
+                        alt="search">
+                    <!-- <input type="text"> -->
+                </div>
+                <div class="dropdown">
+                    <div class="bestMatchContainer">
+                        <p>Best match</p>
+                        <div class="dropdownBtn">
+                            <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/arrow.png"
+                                alt="btn">
+                        </div>
+                    </div>
+                    <ul class="sortBy_dropdown" style="display: none;">
+                        <li>Default</li>
+                        <li>Low to high</li>
+                        <li>High to low </li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+            <section class="galleria">
+
+
+                <div class="slideshow-container">
+                    <div class="text">
+                        <h2>
+                            CREATE YOUR CALM
+                        </h2>
+                        <h3>Relax right here</h3>
+                    </div>
+
+
+                    <div class="mySlides fade">
+
+                        <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/sofaMain.png"
+                            style="width:100%">
+
+                    </div>
+
+                    <div class="mySlides fade">
+
+                        <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/cauch1.png"
+                            style="width:100%">
+
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+
+                </div>
+                <!-- <div class="galleria_container">
+                    <dv class="content">
+                        <h2>
+                            CREATE YOUR CALM
+                        </h2>
+                        <h3>Relax right here</h3>
+                </div> -->
+    </div>
+    </section>
+    <hr>
+    <footer>
+        <div class="footer_nav_container">
+            <nav class="footer_main_nav">
+                <ul>
+                    <li>about us</li>
+                    <li>how can we help</li>
+                    <li>shop by room</li>
+                    <li>shop by style</li>
+                </ul>
+            </nav>
+
+            <nav class="footer_social_nav">
+
+                <div class="social_wrapper">
+                    <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/instagram.png"
+                        alt="instagram">
+                </div>
+                <div class="social_wrapper">
+                    <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/facebook.png"
+                        alt="facebook">
+                </div>
+                <div class="social_wrapper">
+                    <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/twitter.png"
+                        alt="twitter">
+                </div>
+                </ul>
+            </nav>
+        </div>
+        </nav>
+
+    </footer>
     <script src="products.js"></script>
+    <script src="index.js"></script>
+
+    </main>
+    </div>
 </body>
+
 </html>

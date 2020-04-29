@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/shopStyle.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/detailsStyle.css">
+    <title>Sofa shop</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- * * * N A V I G A T I O N * * *  -->
+        <main>
+            <div class="nav_container">
+                <nav class="top_nav">
+                    <div class="logo_wrapper">
+                        <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/logo.png"
+                            alt="logo">
+                    </div>
+                    <ul>
+                        <li class="list_item"><a href="index.html">HOME</a></li>
+                        <li class="list_item"><a href="shop.html">SHOP</a></li>
+                        <li class="list_item">magazine</li>
+                    </ul>
+                </nav>
+                <nav class="right_nav">
+                    <ul>
+                        <li>
+                            <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/local_grocery_store-24px.svg"
+                                alt="shopping card">
+<div class="cart_items" style="display:none;"></div>
+                        </li>
+                        <li>login</li>
+                    </ul>
+                </nav>
+            </div>
+<button class="goBack" style="display:none;">❮ GO BACK</button>
+            <!-- * * * M A I N * C O N T E N T * * *  -->
+            <section class="mainContent">
+                <div class="search_container">
+                    <div class="wrapper">
+                        <p>bedroom</p>
+                    </div>
+
+                    <div class="custom-select">
+                        <select>
+                            <option value="0">Best Match</option>
+                            <option value="1">Default</option>
+                            <option value="2">Low to high</option>
+                            <option value="3">High to low</option>
+                        </select>
+                    </div>
+                </div>
+
+                
+                <div class="main_container">
+
+                    <!-- * * * F I L T E R S * *  -->
+                    <div class="left_filters">
+                        <p class="p">Filter by</p>
+                        <div class="collection_filter">
+                            <p>Collection</p>
+                            <div class="dropdown_collection_btn">
+                                <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/arrow.png"
+                                    alt="btn">
+                            </div>
+                        </div>
+                        <div class="color_filter">
+                            <p>Color</p>
+                            <div class="dropdown_colour_btn">
+                                <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/arrow.png"
+                                    alt="btn">
+                            </div>
+                        </div>
+                        <ul class="color_dropdown" style="display: none;">
+                            <!-- <li><input type="checkbox" name="red" value="red"> Red</li>
+                                <li><input type="checkbox" name="red" value="red"> Red</li>
+                                <li><input type="checkbox" name="red" value="red"> Red</li>
+                                <li><input type="checkbox" name="red" value="red"> Red</li>
+                                <li><input type="checkbox" name="red" value="red"> Red</li> -->
+                        </ul>
+                        <div class="category_filter">
+                            <p>Category</p>
+                            <div class="dropdown_category_btn">
+                                <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/arrow.png"
+                                    alt="btn">
+                            </div>
+                        </div>
+                        <ul class="category_dropdown" style="display: none;">
+                            <!-- <li>
+                               <input type="checkbox">
+                                   <p></p>
+                           </li> -->
+                        </ul>
+
+                        <div class="range-slider">
+                            <p>Price range</p>
+
+                            <input value="0" min="0" max="2000" step="0.10" type="range">
+                            <input value="2000" min="0" max="2000" step="0.10" type="range">
+                            <div class="ranges">
+                                <h4 class="min">$1</h4>
+                                <h4 class="max">$100</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- * * * E N D * F I L T E R S * * *  -->
+                    <!-- * * *  -->
+                    <!-- * * * P R O D U C T S * * *  -->
+                    <div class="products">
+                        <ul>
+                            <!-- <li class="product">
+                            <div class="product_img_wrapper">
+                                <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/product1.png"
+                                    alt="">
+                            </div>
+                            <div class="product_details">
+                                <h3 class="name"></h3>
+                                <h4 class="type"></h4>
+
+                            </div>
+                            <h3 class="price"></h3>
+                            <div class="add_img_wrapper"><img
+                                    src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/add.png"
+                                    alt=""></div>
+                        </li> -->
+
+                        </ul>
+                    </div>
+                    <!-- * * * E N D * P R O D U C T S * * * -->
+                    <!-- * * * * P A G E * N U M B E R S * * *  -->
+
+                </div>
+                <div class="page_numbers">
+                    <!-- <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>
+                        <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/right.png"
+                            alt="arrow">
+                    </li>
+                </ul> -->
+                </div>
+            </section>
+            <!-- * * * D E T A I L S * * * * -->
+
+            <div class="container_details" style="display: none;">
+
+                <!-- <div class="carousel_wrapper"> -->
+
+
+                <div class="container">
+                    <div class="mySlides">
+                        <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/cauch1.png">
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/cauch2.png">
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/cauch3.png">
+                    </div>
+
+                    <div class="mySlides">
+
+                        <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/cauch4.png">
+                    </div>
+
+
+                </div>
+<div id="previous"><a class="prev">❮</a>
+</div>
+                <div class="row">
+                    
+
+                    <div class="column">
+                        <img class="demo cursor"
+                            src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/cauch1.png"
+                            alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor"
+                            src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/cauch2.png"
+                            alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor"
+                            src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/cauch3.png"
+                            alt="">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor"
+                            src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/cauch4.png"
+                            alt="">
+                    </div>
+                  
+
+                </div>
+<div id="next"> <a class="next">❯</a></div>
+
+                <div class="details_container">
+                    <h2>Barnagh</h2>
+                    <p> Some details</p>
+                    <h4>$90</h4>
+                    <h5>DISPATCHED IN 4-5 WEEKS <span>4 left</span></h5>
+
+                    <ul class="colors">
+                        <!-- <li></li>
+                        <li></li>
+                        <li></li> -->
+                    </ul>
+
+                    <button class="addToBucket">add to bucket</button>
+                    <button class="checkout" style="display: none;">go to checkout</button>
+                    <button class="details">details <img
+                            src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/arrow.png"
+                            alt=""></button>
+                    <div class="dropdownDetails" style="display: none;">
+                        <p class="first"> - some details</p>
+                        <p class="second"> - some details</p>
+                        <p class="third"> - some details</p>
+                        <p class="forth"> - some details</p>
+                        <p class="fifth"> - some details</p>
+                        <p class="sixth"> - some details</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr>
+            <footer>
+                <div class="footer_nav_container">
+                    <nav class="footer_main_nav">
+                        <ul>
+                            <li>about us</li>
+                            <li>how can we help</li>
+                            <li>shop by room</li>
+                            <li>shop by style</li>
+                        </ul>
+                    </nav>
+
+                    <nav class="footer_social_nav">
+
+                        <div class="social_wrapper">
+                            <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/instagram.png"
+                                alt="instagram">
+                        </div>
+                        <div class="social_wrapper">
+                            <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/facebook.png"
+                                alt="facebook">
+                        </div>
+                        <div class="social_wrapper">
+                            <img src="/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/twitter.png"
+                                alt="twitter">
+                        </div>
+                        </ul>
+                    </nav>
+                </div>
+                </nav>
+
+            </footer>
+            <script src="products.js"></script>
+            <script src="index.js"></script>
+            <script src="shop.js"></script>
+        </main>
+    </div>
+</body>
+
+</html>

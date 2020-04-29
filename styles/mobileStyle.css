@@ -1,0 +1,65 @@
+@media screen and (max-width: 767px) {
+    main .bars {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    main .bars::before,
+    main .bars::after {
+        transform: translate(-50%, -1.5em);
+    }
+
+    main .bars::after {
+        transform: translate(-50%, 1.5em);
+    }
+}
+
+
+
+@media screen and (max-width: 414px) {
+
+    .logo_wrapper {
+        position: absolute;
+        width: 90px;
+        height: 24px;
+        left: 309px;
+        top: 40px;
+    }
+
+    .galleria_container {
+        display: block;
+        position: absolute;
+        width: 400px;
+        height: 368px;
+        left: 0px;
+        top: 139px;
+        background: linear-gradient(rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)),
+            url("/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/sofaMain.png");
+        background-position: 50% 50%;
+    }
+
+    .content h2 {
+
+        background-clip: text;
+        font-family: Avenir;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 66px;
+        color: #FFFFFF;
+    }
+
+    .content h3 {
+        font-family: Avenir;
+        font-style: normal;
+        text-decoration: underline;
+        font-weight: normal;
+        font-size: 26px;
+        line-height: 36px;
+        color: #FFFFFF;
+    }
+
+}
