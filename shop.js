@@ -325,7 +325,7 @@ divSortBy.addEventListener("click", (event) => {
     let selected = selectContainer[i].getElementsByTagName("select")[0];
     let selectedOption = selected.options[selected.selectedIndex].value;
     console.log(selectedOption);
-    if (selectedOption == 1) {
+    if (selectedOption == 0) {
       products.sort((a, b) => {
         return a[0] - b[20];
       });
@@ -428,16 +428,12 @@ const selectProduct = (product) => {
   console.log("selected product", product);
   mainSection.style.display = "none";
   detailsContainer.style.display = "block";
-  goBack.style.display = "block";
 
   let sliderImage;
   h2Name.innerHTML = product.name;
   pDetails.innerHTML = product.description;
   h4Price.innerHTML = `$${product.price.toFixed(2)}`;
   h5Delivery.innerHTML = `DISPATCHED IN 4-5 WEEKS <span>1 left</span>`;
-
-  buttonAddToBucket.id = product.name;
-  checkoutButton.id = `${product.name}checkout`;
 
   for (let i = 0; i < product.colors.length; i++) {
     let liColor = document.createElement("li");
@@ -451,8 +447,7 @@ const selectProduct = (product) => {
   p5.innerHTML = ` - Filling Materials: ${product.filling_materials} `;
   p6.innerHTML = ` - Comfort level: ${product.comfort_level} `;
 
-  buttonAddToBucket.onclick = (product) => {
-    console.log("added to cart", product);
+  buttonAddToBucket.onclick = () => {
     cart.push(product);
     localStorage.setItem("cart", JSON.stringify(cart));
     buttonAddToBucket.style.display = "none";
@@ -460,12 +455,12 @@ const selectProduct = (product) => {
     bucketNumber();
   };
 
-  checkoutButton.onclick = (product) => {
-    checkoutButton.style.display = "none";
-    buttonAddToBucket.style.display = "block";
-    cart.splice(product, 1);
-    bucketNumber();
-  };
+  // checkoutButton.onclick = (product) => {
+  //   checkoutButton.style.display = "none";
+  //   buttonAddToBucket.style.display = "block";
+  //   cart.splice(product, 1);
+  //   bucketNumber();
+  // };
 };
 
 // * * * * C A R O U S E L * * *
@@ -519,12 +514,12 @@ function currentSlide(n) {
 
 console.log(cart);
 
-goBack.onclick = () => {
-  detailsContainer.style.display = "none";
-  goBack.style.display = "none";
-  mainSection.style.display = "block";
-  ulColors.innerHTML = "";
-};
+// goBack.onclick = () => {
+//   detailsContainer.style.display = "none";
+//   goBack.style.display = "none";
+//   mainSection.style.display = "block";
+//   ulColors.innerHTML = "";
+// };
 
 details.addEventListener("click", function () {
   if (divDetails.style.display == "none") {

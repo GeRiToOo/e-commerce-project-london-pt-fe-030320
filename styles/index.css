@@ -295,9 +295,10 @@ img {
 .slideshow-container {
   position: relative;
   margin: auto;
-  max-width: 1375px;
+  max-width: 1200px;
   margin-top: 50px;
   height: 80%;
+  overflow: hidden;
 
 
 }
