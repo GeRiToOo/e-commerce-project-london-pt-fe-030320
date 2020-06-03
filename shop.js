@@ -12,6 +12,7 @@ let goBack = document.querySelector(".goBack");
 const mainContainer = document.querySelector(".main_container");
 let pageNumbersDiv = document.querySelector(".page_numbers");
 let dropdownColourButton = document.querySelector(".dropdown_colour_btn");
+let pDropDown = dropdownColourButton.querySelector(" p");
 let ulListColors = document.querySelector(".color_dropdown");
 let ulListCategory = document.querySelector(".category_dropdown");
 const divProducts = document.querySelector(".products");
@@ -41,10 +42,19 @@ let p5 = document.querySelector(".fifth");
 let p6 = document.querySelector(".sixth");
 let cartDiv = document.querySelector(".cart_items");
 let checkoutButton = document.querySelector(".checkout");
+let burger = document.querySelector(`#btn`);
 
 bucketNumber();
 
 // * * * P A G I N A T I O N * * *
+checkSize();
+function checkSize() {
+  if (burger.style.display === "block") {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 let current_page = 1;
 let rows = 6;
@@ -74,7 +84,7 @@ function displayList(items, wrapper, rows_per_page, page) {
 
     const productImage = document.createElement("img");
     productImageWrapper.appendChild(productImage);
-    productImage.src = `/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/${e}.png`;
+    productImage.src = `./images/${e}.png`;
     e++;
     const productDetails = document.createElement("div");
     productDetails.className = "product_details";
@@ -102,8 +112,7 @@ function displayList(items, wrapper, rows_per_page, page) {
     product.appendChild(addImageWrapper);
 
     const addImage = document.createElement("img");
-    addImage.src =
-      "/Users/gerganarangelova/e-commerce-project-london-pt-fe-030320/images/add.png";
+    addImage.src = "./images/add.png";
     addImageWrapper.appendChild(addImage);
   }
 }
@@ -160,19 +169,29 @@ for (let i = 0; i < unique.length; i++) {
   let inputCheckbox = document.createElement("input");
   inputCheckbox.setAttribute("type", "checkbox");
   inputCheckbox.value = unique[i];
+  inputCheckbox.name = "color";
   li.appendChild(inputCheckbox);
 
-  let p = document.createElement("p");
-  p.innerText = unique[i];
-  li.appendChild(p);
+  let labelColor = document.createElement("label");
+  labelColor.innerText = unique[i];
+  labelColor.setAttribute("for", "color");
+  li.appendChild(labelColor);
+
+  // let p = document.createElement("p");
+  // p.innerText = unique[i];
+  // li.appendChild(p);
 }
 
 dropdownColourButton.addEventListener("click", function () {
   if (ulListColors.style.display === "none") {
     ulListColors.style.display = "block";
     ulListCategory.style.display = "none";
+    pDropDown.setAttribute("style", "transform: rotate(90deg);");
+    dropdown_category_btnP.setAttribute("style", "transform: rotate(270deg);");
   } else if (ulListColors.style.display === "block") {
     ulListColors.style.display = "none";
+
+    pDropDown.setAttribute("style", "transform: rotate(270deg);");
   }
 });
 
@@ -199,10 +218,12 @@ const createCategories = (uniqueCategory) => {
     let inputCheckboxCategory = document.createElement("input");
     inputCheckboxCategory.setAttribute("type", "checkbox");
     inputCheckboxCategory.value = category;
+    inputCheckboxCategory.name = "category";
     liCategory.appendChild(inputCheckboxCategory);
 
     let labelCategory = document.createElement("label");
     labelCategory.innerText = category;
+    labelCategory.setAttribute("for", "category");
     liCategory.appendChild(labelCategory);
   });
 };
@@ -210,13 +231,17 @@ const createCategories = (uniqueCategory) => {
 createCategories(uniqueCategory);
 
 let dropdown_category_btn = document.querySelector(".dropdown_category_btn");
+let dropdown_category_btnP = dropdown_category_btn.querySelector("p");
 
 dropdown_category_btn.addEventListener("click", function () {
   if (ulListCategory.style.display === "none") {
     ulListCategory.style.display = "block";
     ulListColors.style.display = "none";
+    pDropDown.setAttribute("style", "transform: rotate(270deg);");
+    dropdown_category_btnP.setAttribute("style", "transform: rotate(90deg);");
   } else if (ulListCategory.style.display === "block") {
     ulListCategory.style.display = "none";
+    dropdown_category_btnP.setAttribute("style", "transform: rotate(270deg);");
   }
 });
 
@@ -325,7 +350,7 @@ divSortBy.addEventListener("click", (event) => {
     let selected = selectContainer[i].getElementsByTagName("select")[0];
     let selectedOption = selected.options[selected.selectedIndex].value;
     console.log(selectedOption);
-    if (selectedOption == 0) {
+    if (selectedOption == 1) {
       products.sort((a, b) => {
         return a[0] - b[20];
       });
@@ -454,13 +479,6 @@ const selectProduct = (product) => {
     checkoutButton.style.display = "block";
     bucketNumber();
   };
-
-  // checkoutButton.onclick = (product) => {
-  //   checkoutButton.style.display = "none";
-  //   buttonAddToBucket.style.display = "block";
-  //   cart.splice(product, 1);
-  //   bucketNumber();
-  // };
 };
 
 // * * * * C A R O U S E L * * *
@@ -512,15 +530,6 @@ function currentSlide(n) {
 }
 // * * * * * * * * * *
 
-console.log(cart);
-
-// goBack.onclick = () => {
-//   detailsContainer.style.display = "none";
-//   goBack.style.display = "none";
-//   mainSection.style.display = "block";
-//   ulColors.innerHTML = "";
-// };
-
 details.addEventListener("click", function () {
   if (divDetails.style.display == "none") {
     divDetails.style.display = "block";
@@ -538,3 +547,19 @@ function bucketNumber() {
     cartDiv.style.display = "none";
   }
 }
+
+function mobileFilter() {
+  let filterButton = document.querySelector(`.dropdown_filter_btn`);
+  let footer = document.querySelector(`.footer_nav_container`);
+  let searchContainer = document.querySelector(`.search_container`);
+  const body = document.querySelector(`body`);
+
+  filterButton.addEventListener("click", () => {
+    searchContainer.style.display = "none";
+    filters.style.display = "block";
+    divProducts.style.display = "none";
+    footer.style.display = "none";
+    body.setAttribute("style", "background-color: black;");
+  });
+}
+mobileFilter();

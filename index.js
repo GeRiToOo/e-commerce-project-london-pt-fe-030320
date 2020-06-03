@@ -6,17 +6,6 @@ let liImg = document.querySelector(`.carousel li img`);
 const buttonPrev = document.querySelector(`#previous`);
 const buttonNext = document.querySelector(`#next`);
 
-// let detailsButton = document.querySelector(".details");
-// let dropdownDetails = document.querySelector(".dropdownDetails");
-
-// detailsButton.addEventListener("click", function () {
-//   if (dropdownDetails.style.display == "none") {
-//     dropdownDetails.style.display = "block";
-//   } else if (dropdownDetails.style.display == "block") {
-//     dropdownDetails.style.display = "none";
-//   }
-// });
-
 let sliderIndex = 1;
 showSlides(sliderIndex);
 
@@ -39,3 +28,24 @@ function showSlides(n) {
 
   slides[sliderIndex - 1].style.display = "block";
 }
+
+const body = document.querySelector(`body`);
+
+const navSlide = () => {
+  const burger = document.querySelector(`#btn`);
+  const cancel = document.querySelector(`#cancel`);
+
+  burger.addEventListener("click", () => {
+    burger.setAttribute("style", "color: white;");
+    cancel.setAttribute("style", "color: white;");
+    body.setAttribute("style", "background-color: black;");
+  });
+
+  cancel.addEventListener("click", () => {
+    burger.setAttribute("style", "color: black;");
+    cancel.setAttribute("style", "color: black;");
+    body.removeAttribute("style", "background-color: black;");
+  });
+};
+
+navSlide();
