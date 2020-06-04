@@ -158,7 +158,7 @@ main .search_container .best_match p {
 }
 
 .left_filters {
-  width: 450px;
+  width: 400px;
   height: 342px;
   margin-left: 10px;
 }
@@ -166,6 +166,7 @@ main .search_container .best_match p {
 label {
   margin-left: 10px;
 }
+
 .left_filters .p {
   font-family: Avenir;
   font-style: normal;
@@ -383,7 +384,7 @@ label {
 
 input[type="range"] {
   -webkit-appearance: none;
-  width: 100%;
+  width: 280px;
   margin: 8.55px 0;
 }
 
@@ -536,13 +537,19 @@ input[type="range"]:focus::-ms-fill-upper {
   padding-left: 0;
 }
 
+
+
 .product {
   position: relative;
   display: inline-flex;
   margin-top: 10px;
-  width: 240px;
+  width: 230px;
   height: 300px;
   cursor: pointer;
+}
+
+.product:hover {
+  transform: scale(1.02, 1.02);
 }
 
 .product_img_wrapper img {
@@ -946,50 +953,50 @@ hr {
     object-fit: cover;
   }
 
-  #check:checked ~ label #cancel {
+  #check:checked~label #cancel {
     right: 50px;
     display: block;
   }
 
-  #check:checked ~ label #btn {
+  #check:checked~label #btn {
     display: block;
     right: 500px;
     transition: all 0.4s;
   }
 
-  #check:checked ~ .nav_container .top_nav ul {
+  #check:checked~.nav_container .top_nav ul {
     left: 0;
   }
 
-  #check:checked ~ .nav_container .right_nav ul .cart {
+  #check:checked~.nav_container .right_nav ul .cart {
     display: none;
   }
 
-  #check:checked ~ .search_container .search_wrapper {
+  #check:checked~.search_container .search_wrapper {
     left: -100%;
   }
 
-  #check:checked ~ .search_container .best_match {
+  #check:checked~.search_container .best_match {
     display: none;
   }
 
-  #check:checked ~ .mainContent .main_container .left_filters .filter_filter {
+  #check:checked~.mainContent .main_container .left_filters .filter_filter {
     display: none;
   }
 
-  #check:checked ~ .mainContent .main_container .products {
+  #check:checked~.mainContent .main_container .products {
     display: none;
   }
 
-  #check:checked ~ .mainContent .page_numbers {
+  #check:checked~.mainContent .page_numbers {
     display: none;
   }
 
-  #check:checked ~ hr {
+  #check:checked~hr {
     display: none;
   }
 
-  #check:checked ~ footer {
+  #check:checked~footer {
     left: -100%;
   }
 
